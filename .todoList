@@ -1,0 +1,15 @@
+make a questionRouter
+make a firebase uid appear as an teachersId on a post request from native. 
+
+
+
+quizzes will have teachersId's 
+
+questions will have quizId's and submissionId's and correct answers
+
+figure out a way to say which student answered whice question 
+
+
+
+submissions will have quizIds created by, studentIds: answered by. , and QuestionIDs: what questions students answered.
+
