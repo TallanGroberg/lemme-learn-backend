@@ -10,9 +10,9 @@ const questionSchema = new Schema({
     type: String,
     required: true
   },
-  Quiz_id: {
-    type: Schema.Types.ObjectId,
-    ref: "Quiz"
+  quiz_id: {
+    type: String,
+    
   },
   Student_id: {
     type: String,

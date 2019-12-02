@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/LMS', {
 
 
 app.use('/quiz', require('./routes/quizRouter'))
-
+app.use('/question', require('./routes/questionRouter'))
 app.use( (err,req,res,next) => {
   console.log(err)
   err.name ? res.status(err.status) : null
