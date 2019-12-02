@@ -24,8 +24,8 @@ userRouter.post('/', (req,res,next) => {
   })
 })
 
-userRouter.get('/:_id', (req,res,next) => {
-  User.findById(req.params._id, (err,user) => {
+userRouter.get('/:firebaseUid', (req,res,next) => {
+  User.findOne({firebaseUid: req.params.firebaseUid}, (err,user) => {
     if(err) {
       res.status(500)
       return next(err)
