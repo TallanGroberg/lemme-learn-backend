@@ -24,4 +24,14 @@ userRouter.post('/', (req,res,next) => {
   })
 })
 
+userRouter.get('/:_id', (req,res,next) => {
+  User.findById(req.params._id, (err,user) => {
+    if(err) {
+      res.status(500)
+      return next(err)
+    }
+    return res.status(200).send(user)
+  })
+})
+
 module.exports = userRouter
