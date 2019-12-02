@@ -6,6 +6,10 @@ const quizSchema = new Schema({
     type: String,
     required: true
   },
+  teacher: {
+    type: String,
+    required: true
+  }
   
 })
 
