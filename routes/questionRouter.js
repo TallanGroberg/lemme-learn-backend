@@ -4,7 +4,7 @@ const Question = require('../models/question')
 
 const handleRequest = (err,req,res,next,arg) => err ? res.status(500).next(err) : res.status(200).send(arg)
 
-console.log('hit it ;alksdf;alis')
+
 questionRouter.get('/', (req,res,next) => {
   Question.find( (err,question) => {
     if(err) {

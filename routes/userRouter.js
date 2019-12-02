@@ -34,4 +34,17 @@ userRouter.get('/:firebaseUid', (req,res,next) => {
   })
 })
 
+userRouter.put('/:firebaseUid', (req,res,next) => {
+  User.findOneAndUpdate({firebaseUid: req.params.firebaseUid},
+    req.body, 
+      {new: true}, 
+        (err,user) => {
+          if(err) {
+            res.status(500)
+            return next(err)
+          }
+          return res.status(201).send(user)
+  })
+})
+
 module.exports = userRouter
