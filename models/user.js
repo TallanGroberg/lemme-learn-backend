@@ -13,6 +13,9 @@ const userSchema = new Schema({
   teacher: {
     type: Boolean
   },
+  yourTeacher: {
+    type: String
+  }
   
 })
 
