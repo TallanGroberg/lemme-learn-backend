@@ -13,6 +13,7 @@ userRouter.get('/', (req,res) => {
   })
 })
 
+
 userRouter.post('/', (req,res,next) => {
   const newUser = new User(req.body)
   newUser.save( (err,user) => {
