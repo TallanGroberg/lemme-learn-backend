@@ -13,8 +13,8 @@ const userSchema = new Schema({
   teacher: {
     type: Boolean
   },
-  yourTeacher: {
-    type: String
+  yourTeachers: {
+    type: Array
   }
   
 })
