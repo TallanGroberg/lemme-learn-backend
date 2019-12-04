@@ -11,6 +11,16 @@ quizRouter.get('/', (req,res,next) => {
   })
 })
 
+quizRouter.get('/teachersquizzes/:teacher', (req,res,next) => {
+  Quiz.find({teacher: req.params.teacher}, (err,quizzes) => {
+    if(err) {
+      res.status(500)
+      return next(err)
+    }
+    res.status(201).send(quizzes)
+  })
+})
+
 quizRouter.get('/:_id', (req,res,next) => {
   Quiz.findOne( (err,quiz) => {
     handleRequest(err,req,res,next,quiz)
