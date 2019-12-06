@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/LMS', {
 app.use('/quiz', require('./routes/quizRouter'))
 app.use('/question', require('./routes/questionRouter'))
 app.use('/user', require('./routes/userRouter'))
-// app.use('/submission', require('./routes/submissionRouter.js'))
+app.use('/grading', require('./routes/gradingRouter'))
 
 
 app.use( (err,req,res,next) => {
