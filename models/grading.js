@@ -13,8 +13,10 @@ const gradingSchema = new Schema({
   },
   students_answer: {
     type: String,
+  },
+  answered_correctly: {
+    type: Boolean
   }
-  
 })
 
 module.exports = mongoose.model('Grading', gradingSchema)
