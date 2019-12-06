@@ -12,6 +12,25 @@ userRouter.get('/', (req,res) => {
   })
 })
 
+userRouter.get('/teachers', (req,res,next) => {
+  User.find({teacher: true}, (err, teachers) => {
+    if(err) {
+      res.status(500)
+      return next(err)
+    }
+    return res.status(200).send(teachers)
+  })
+})
+userRouter.get('/students', (req,res,next) => {
+  User.find({teacher: false}, (err, teachers) => {
+    if(err) {
+      res.status(500)
+      return next(err)
+    }
+    return res.status(200).send(teachers)
+  })
+})
+
 
 
 
