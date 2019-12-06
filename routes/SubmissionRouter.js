@@ -2,7 +2,7 @@ const express = require('express')
 const submissionRouter = express.Router()
 const Submission = require('../models/submission')
 
-console.log('hit submissionRouter')
+
 
 submissionRouter.get('/', (req,res,next) => {
   Submission.find( (err,submission) => {
