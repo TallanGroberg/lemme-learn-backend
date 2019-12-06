@@ -18,3 +18,9 @@ const submissionSchema = new Schema({
 })
 
 module.exports = mongoose.model('Submission', submissionSchema)
+// {
+// 	"quiz_id": "",
+//   "question_id": "",
+//   "student_Uid": "",
+//   "students_answer": ""
+// }
