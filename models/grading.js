@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const submissionSchema = new Schema({
+const gradingSchema = new Schema({
   quiz_id: {
     type: String,
   },
@@ -17,5 +17,5 @@ const submissionSchema = new Schema({
   
 })
 
-module.exports = mongoose.model('Submission', submissionSchema)
+module.exports = mongoose.model('Grading', gradingSchema)
 

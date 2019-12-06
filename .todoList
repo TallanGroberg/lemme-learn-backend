@@ -5,13 +5,13 @@ make a firebase uid appear as an teachersId on a post request from native.
 
 quizzes will have teachersId's 
 
-questions will have quizId's and submissionId's and correct answers
-// const Submission = require('../models/submission.js')
+questions will have quizId's and gradingId's and correct answers
+// const Grading = require('../models/grading.js')
 figure out a way to say which student answered whice question 
 
 
 
-submissions will have quizIds created by, studentIds: answered by. , and QuestionIDs: what questions students answered.
+grades will have quizIds created by, studentIds: answered by. , and QuestionIDs: what questions students answered.
 
 // {
 // 	"quiz_id": "",
@@ -20,23 +20,4 @@ submissions will have quizIds created by, studentIds: answered by. , and Questio
 //   "students_answer": ""
 // }
 
-// submissionRouter.get('/', (req,res,next) => {
-//   Submission.find( (err,submission) => {
-//     if(err) {
-//       res.status(500)
-//       return next(err)
-//     }
-//     return res.status(200).send(submission)
-//   })
-// })
 
-// submissionRouter.post('/', (req,res,next) => {
-//   const newSubmission = new Submission(req.body)
-//   newSubmission.save( (err,submission) => {
-//     if(err) {
-//       res.status(500)
-//       return next(err)
-//     }
-//     return res.status(201).send(submission)
-//   })
-// })
