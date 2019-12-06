@@ -1,29 +1,29 @@
 const express = require('express')
 const submissionRouter = express.Router()
-const Submission = require('../models/submission.js')
+// const Submission = require('../models/submission.js')
 
 
+console.log('in submission router')
+// submissionRouter.get('/', (req,res,next) => {
+//   Submission.find( (err,submission) => {
+//     if(err) {
+//       res.status(500)
+//       return next(err)
+//     }
+//     return res.status(200).send(submission)
+//   })
+// })
 
-submissionRouter.get('/', (req,res,next) => {
-  Submission.find( (err,submission) => {
-    if(err) {
-      res.status(500)
-      return next(err)
-    }
-    return res.status(200).send(submission)
-  })
-})
-
-submissionRouter.post('/', (req,res,next) => {
-  const newSubmission = new Submission(req.body)
-  newSubmission.save( (err,submission) => {
-    if(err) {
-      res.status(500)
-      return next(err)
-    }
-    return res.status(201).send(submission)
-  })
-})
+// submissionRouter.post('/', (req,res,next) => {
+//   const newSubmission = new Submission(req.body)
+//   newSubmission.save( (err,submission) => {
+//     if(err) {
+//       res.status(500)
+//       return next(err)
+//     }
+//     return res.status(201).send(submission)
+//   })
+// })
 
 
 
