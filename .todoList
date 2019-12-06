@@ -13,7 +13,6 @@ figure out a way to say which student answered whice question
 
 submissions will have quizIds created by, studentIds: answered by. , and QuestionIDs: what questions students answered.
 
-
 // {
 // 	"quiz_id": "",
 //   "question_id": "",
