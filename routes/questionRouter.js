@@ -15,6 +15,8 @@ questionRouter.get('/', (req,res,next) => {
   })
 })
 
+
+
 questionRouter.post('/', (req,res,next) => {
   console.log(req.body)
   const newQuestion = new Question(req.body)
