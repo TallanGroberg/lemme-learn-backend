@@ -30,7 +30,11 @@ quizRouter.get('/:_id', (req,res,next) => {
 quizRouter.post('/', (req,res,next) => {
   const newQuiz = new Quiz(req.body)
     newQuiz.save( (err,quiz) => {
-      dataBaseChange(err,req,res,next,quiz)
+      if(err) {
+        res.status(500)
+        return next(err)
+      }
+      return res.status.send(quiz)
   })
 })
 
