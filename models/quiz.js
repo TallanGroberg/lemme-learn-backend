@@ -4,11 +4,11 @@ const Schema = mongoose.Schema
 const quizSchema = new Schema({
   name: {
     type: String,
-    required: true
+    
   },
   teacher: {
     type: String,
-    required: true
+    
   }
   
 })
