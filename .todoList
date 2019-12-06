@@ -19,3 +19,14 @@ submissions will have quizIds created by, studentIds: answered by. , and Questio
 //   "student_Uid": "",
 //   "students_answer": ""
 // }
+
+submissionRouter.post('/', (req,res,next) => {
+  const newSubmission = new Submission(req.body)
+  newSubmission.save( (err,submission) => {
+    if(err) {
+      res.status(500)
+      return next(err)
+    }
+    return res.status(201).send(submission)
+  })
+})

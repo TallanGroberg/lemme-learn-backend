@@ -14,16 +14,6 @@ submissionRouter.get('/', (req,res,next) => {
   })
 })
 
-submissionRouter.post('/', (req,res,next) => {
-  const newSubmission = new Submission(req.body)
-  newSubmission.save( (err,submission) => {
-    if(err) {
-      res.status(500)
-      return next(err)
-    }
-    return res.status(201).send(submission)
-  })
-})
 
 
 module.exports = submissionRouter
