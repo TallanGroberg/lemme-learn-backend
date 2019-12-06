@@ -34,7 +34,7 @@ quizRouter.post('/', (req,res,next) => {
         res.status(500)
         return next(err)
       }
-      return res.status.send(quiz)
+      return res.status(201).send(quiz)
   })
 })
 
