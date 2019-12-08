@@ -38,4 +38,16 @@ questionRouter.delete('/:_id', (req,res,next) => {
   })
 })
 
+questionRouter.put('/:_id', (req,res,next) => {
+  Question.findByIdAndUpdate({_id: req.params._id},
+     req.body, {new: true},
+     (err,question) => {
+      if(err) {
+        res.status(500)
+        return next(err)
+      }
+      return res.status(201).send(question)
+  })
+})
+
 module.exports = questionRouter
