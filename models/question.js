@@ -14,7 +14,7 @@ const questionSchema = new Schema({
     type: String,
     
   },
-  Student_id: {
+  teacher_id: {
     type: String,
   },
   
