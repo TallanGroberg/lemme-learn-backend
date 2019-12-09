@@ -8,9 +8,10 @@ const quizSchema = new Schema({
   },
   teacher: {
     type: String,
-    
+  },
+  completedBy: {
+    type: Array
   }
-  
 })
 
 

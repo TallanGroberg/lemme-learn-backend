@@ -13,11 +13,8 @@ figure out a way to say which student answered whice question
 
 grades will have quizIds created by, studentIds: answered by. , and QuestionIDs: what questions students answered.
 
- {
- 	"quiz_id": "",
-   "question_id": "",
-   "student_Uid": "",
-   "students_answer": ""
- }
+make quizzes have an array of student ids so that they can be filtered from the quiz list and shown the grade.
+
+
 
 
